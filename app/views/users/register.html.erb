@@ -1,0 +1,28 @@
+<div class="middle_align_new">
+<% form_for :user, @user, :url => {:action => "create"} do |f| %>
+<%= f.error_messages %>
+<p>
+	<label for="first_name">First name</label><br>
+	<%=f.text_field :first_name%>
+</p>
+<p>
+	<label for="last_name">Last name</label><br>
+	<%=f.text_field :last_name%>
+</p>
+<p>
+	<label for="password">Password</label><br>
+	<%=f.password_field :password, :size => 15 %>
+</p>
+<p>
+	<label for="password">Confirm Password</label><br>
+	<%=f.password_field :password_confirmation, :size => 15 %>
+</p>
+<p>
+	<label for="email">Email</label><br>
+	<%= f.text_field :email%>
+</p>
+
+<%=submit_tag "Register"%>	
+
+<% end %>
+</div>
