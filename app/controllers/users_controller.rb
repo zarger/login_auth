@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_filter :login_required, :only => [:homepage]
   
   def homepage
+    #some comment
     @user = current_user
   end
   
